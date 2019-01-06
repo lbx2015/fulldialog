@@ -10,7 +10,7 @@
 
     <style name="MyDialogStyle">
         <item name="android:windowFullscreen">false</item>
-        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowNoTitle">true</item>
         <!-- 进入和退出的动画 -->
         <item name="android:windowAnimationStyle">@style/MyDialogAnimation</item>
     </style>

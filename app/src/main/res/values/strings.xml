@@ -3,4 +3,6 @@
 
     <string name="show_first">弹出对话框</string>
     <string name="dialog_content">对话框要显示的内容</string>
+    <string name="back">返回</string>
+    <string name="show_second">弹出自定义对话框</string>
 </resources>

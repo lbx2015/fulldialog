@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.btn_show).setOnClickListener(this);
+        findViewById(R.id.btn_show2).setOnClickListener(this);
     }
 
     @Override
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_show:
                 DialogUtil.showDialog(this);
+                break;
+            case R.id.btn_show2:
+                FullScreenDialog dialog = new FullScreenDialog(this);
+                dialog.show();
                 break;
             default:
                 break;

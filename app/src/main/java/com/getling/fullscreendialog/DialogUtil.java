@@ -3,6 +3,7 @@ package com.getling.fullscreendialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -16,14 +17,16 @@ public class DialogUtil {
         Window window = dialog.getWindow();
         if (window != null) {
             window.getDecorView().setPadding(0, 0, 0, 0);
-            window.getDecorView().setBackgroundColor(Color.WHITE);
+            window.setBackgroundDrawableResource(android.R.color.transparent);
             WindowManager.LayoutParams layoutParams = window.getAttributes();
             layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
             layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+
             window.setAttributes(layoutParams);
         }
 
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_content, null);
+        contentView.setBackgroundColor(ContextCompat.getColor(contentView.getContext(),R.color.color_33000000));
         contentView.findViewById(R.id.tv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

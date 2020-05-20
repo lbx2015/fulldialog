@@ -22,5 +22,7 @@ public class FullScreenDialog extends Dialog {
             }
         });
         setContentView(contentView);
+        getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
     }
 }
